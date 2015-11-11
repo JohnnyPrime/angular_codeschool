@@ -17,7 +17,7 @@
     }
     ];
 
-    var vocab = [
+    var words = [
         {
             name: 'Directives',
             data: "HTML annotations that trigger Javascript behaviors",
@@ -35,6 +35,24 @@
     },
     ];
 
+    var directives = [
+        {
+            name: 'ng-app',
+            data: "attach the Apllication Module to the page",
+    }, {
+            name: 'ng-controller',
+            data: "attach a Controller function to the page",
+    },
+        {
+            name: 'ng-show / ng-hide',
+            data: "display a section based on an Expression",
+    },
+        {
+            name: 'ng-repeat',
+            data: "repeat a section for each item in an Array",
+    },
+    ];
+
     var app = angular.module('gemStore', []);
 
     app.controller('StoreController', function () {
@@ -42,7 +60,8 @@
     });
 
     app.controller('LessonController', function () {
-        this.vocab = vocab;
+        this.vocab = words;
+        this.directives = directives;
     });
 
 })();

@@ -12,15 +12,24 @@
 <body>
 
     <div ng-controller="LessonController as lesson">
+        <h1>Vocab</h1>
         <div class="lesson row" ng-repeat="vocab in lesson.vocab">
             <h3>
         {{vocab.name}}: 
         <em class="pull-right">{{vocab.data}}</em>
         </h3>
         </div>
+        <h1>Directives</h1>
+        <div class="lesson row" ng-repeat="directive in lesson.directives">
+            <h3>
+        {{directive.name}}: 
+        <em class="pull-right">{{directive.data}}</em>
+        </h3>
+        </div>
     </div>
 
     <div ng-controller="StoreController as store">
+        <h1>Gem Store!</h1>
         <div class="product row" ng-repeat="product in store.products">
             <h3>{{product.name}}
                 <em class="pull-right">{{product.price}}</em>
