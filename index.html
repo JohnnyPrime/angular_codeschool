@@ -9,14 +9,24 @@
     <script src="_js/app.js"></script>
 </head>
 
-<body ng-controller="StoreController as store">
-    <div class="product row" ng-repeat="product in store.products">
-        <h3>
-        {{product.name}}
-        <em class="pull-right">{{product.price}}</em>
-            
-      </h3>
-        <button ng-show="product.canPurchase"> Add to Cart </button>
+<body>
+
+    <div ng-controller="LessonController as lesson">
+        <div class="lesson row" ng-repeat="vocab in lesson.vocab">
+            <h3>
+        {{vocab.name}}: 
+        <em class="pull-right">{{vocab.data}}</em>
+        </h3>
+        </div>
+    </div>
+
+    <div ng-controller="StoreController as store">
+        <div class="product row" ng-repeat="product in store.products">
+            <h3>{{product.name}}
+                <em class="pull-right">{{product.price}}</em>
+            </h3>
+            <button ng-show="product.canPurchase"> Add to Cart </button>
+        </div>
     </div>
 </body>
 
