@@ -3,14 +3,24 @@
 (function () {
     "use strict";
 
-    var gem = {
-        name: 'Azurite',
-        price: 2.95
-    };
+    var gems = [
+        {
+            name: 'Azurite',
+            price: 2.95,
+            canPurchase: false,
+            soldOut: true,
+    }, {
+            name: 'Toss',
+            price: 2.96,
+            canPurchase: false,
+            soldOut: true,
+    }
+    ];
 
     var app = angular.module('gemStore', []);
+
     app.controller('StoreController', function () {
-        this.product = gem;
+        this.products = gems;
     });
 
 })();
